@@ -25,4 +25,4 @@ yarn relay-enum-generator [options]
 
 ## Acknowledgments
 
-It is inspired by **@zth** [work](https://github.com/zth/reason-relay/blob/master/packages/reason-relay/compiler/generateSchemaAssets.js) which he had done for `Reason` language, also thanks to **@smmoosavi** for his contributions.
+It is inspired by @zth [work](https://github.com/zth/reason-relay/blob/master/packages/reason-relay/compiler/generateSchemaAssets.js) which he had done for `Reason` language, also thanks to @smmoosavi for his contributions.
