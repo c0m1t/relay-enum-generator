@@ -1,0 +1,42 @@
+{
+  "name": "relay-enum-generator",
+  "description": "A package which helps generate enums from a generated schema file.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "lib/relay-enum-generator.js",
+  "unpkg": "dist/relay-enum-generator.js",
+  "module": "es/relay-enum-generator.js",
+  "typings": "./index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "bin",
+    "src",
+    "index.d.ts",
+    "tsdoc-metadata.json"
+  ],
+  "bin": {
+    "relay-enum-generator": "bin/relay-enum-generator.js"
+  },
+  "scripts": {
+    "build": "libton-script build",
+    "build:doc": "libton-script doc",
+    "test": "libton-script test --coverage --verbose",
+    "lint": "libton-script lint",
+    "format": "libton-script format",
+    "format:check": "libton-script format --check",
+    "validate": "libton-script lint && libton-script format --check && libton-script test --coverage --verbose",
+    "prepublishOnly": "yarn validate && yarn build"
+  },
+  "devDependencies": {
+    "@types/jest": "25.1.4",
+    "husky": "4.2.3",
+    "libton-script": "0.12.2",
+    "lint-staged": "10.0.8"
+  },
+  "dependencies": {
+    "graphql": "^14.6.0",
+    "yargs": "^15.3.1"
+  }
+}
