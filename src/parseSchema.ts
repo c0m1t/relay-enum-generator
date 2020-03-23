@@ -5,8 +5,8 @@ import {
   ExecutionResult,
   IntrospectionQuery,
   buildSchema,
+  getIntrospectionQuery,
   graphql,
-  introspectionQuery,
 } from 'graphql';
 
 /**
@@ -24,7 +24,12 @@ export async function parseSchema(schemaPath: string) {
   switch (schemaExtname) {
     case '.graphql':
       const graphqlSchema = buildSchema(schema);
-      result = await graphql(graphqlSchema, introspectionQuery, {});
+      const introspectionQuery = getIntrospectionQuery();
+      result = await graphql<IntrospectionQuery>(
+        graphqlSchema,
+        introspectionQuery,
+        {},
+      );
       break;
     case '.json':
       result = JSON.parse(schema);
