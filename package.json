@@ -1,8 +1,16 @@
 {
   "name": "relay-enum-generator",
-  "description": "A package which helps generate enums from a generated schema file.",
-  "version": "0.0.2",
+  "description": "A package which helps generate enums from a generated grqphql schema file.",
+  "version": "0.0.3",
   "license": "MIT",
+  "keywords": [
+    "graphql",
+    "relay",
+    "enum",
+    "generator"
+  ],
+  "homepage": "https://github.com/c0m1t/relay-enum-generator",
+  "repository": "https://github.com/c0m1t/relay-enum-generator",
   "main": "lib/relay-enum-generator.js",
   "unpkg": "dist/relay-enum-generator.js",
   "module": "es/relay-enum-generator.js",
