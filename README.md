@@ -8,21 +8,23 @@ A package which generates enums from a generated schema file.
 ## Install
 
 ```bash
-yarn add relay-enum-generator
+$ yarn add relay-enum-generator
 ```
 
 ## Usage
 
-```bash
-yarn relay-enum-generator [options]
+```
+$ yarn relay-enum-generator [options]
+
+Options:
+
+--name                Name of your generated file
+--path                Path where your file will be generated in
+--schema              Path of schema to read from
+--noFutureProofEnums  This option controls whether or not a catch-all entry is added to enum type definitions for values that may be added in the future.
 ```
 
-**options**:
-
-- name: Name of your generated file
-- path: Path where your file will be generated in
-- schema: Path of schema to read from. Default value is read from relay.config file
-- noFutureProofEnums: This option controls whether or not a catch-all entry is added to enum type definitions for values that may be added in the future.
+Default values for `--schema` and `--noFutureProofEnums` are read from `relay.config` file.
 
 ## Acknowledgments
 
