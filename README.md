@@ -22,6 +22,7 @@ yarn relay-enum-generator [options]
 - name: Name of your generated file
 - path: Path where your file will be generated in
 - schema: Path of schema to read from. Default value is read from relay.config file
+- noFutureProofEnums: This option controls whether or not a catch-all entry is added to enum type definitions for values that may be added in the future.
 
 ## Acknowledgments
 
