@@ -1,7 +1,7 @@
 {
   "name": "relay-enum-generator",
   "description": "A package which helps generate enums from a generated schema file.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "lib/relay-enum-generator.js",
   "unpkg": "dist/relay-enum-generator.js",
