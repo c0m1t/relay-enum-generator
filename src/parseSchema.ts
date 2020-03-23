@@ -11,12 +11,14 @@ import {
 
 /**
  *
- * Parses schema file basedd on its extension.
- * .json and .graphql are supported.
+ * Parses schema file basedd on its type.
+ * supported GraphQL schema types: .graphql
  *
- * @param schemaPath full path of schema file
+ * @param schemaPath full path to GraphQL schema file
  */
-export async function parseSchema(schemaPath: string) {
+export async function parseSchema(
+  schemaPath: string,
+): Promise<ExecutionResult<IntrospectionQuery> | null> {
   const schema = fs.readFileSync(schemaPath, 'utf8');
   const schemaExtname = path.extname(schemaPath);
   let result: ExecutionResult<IntrospectionQuery> | null;
@@ -31,9 +33,7 @@ export async function parseSchema(schemaPath: string) {
         {},
       );
       break;
-    case '.json':
-      result = JSON.parse(schema);
-      break;
+    // TODO: support other GraphQL schema types
     default:
       result = null;
       break;
