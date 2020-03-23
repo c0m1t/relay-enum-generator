@@ -9,13 +9,16 @@ export interface Config {
   name: string;
   path: string;
   schema: string;
+  noFutureProofEnums: boolean;
 }
 
 export function write(
   result: ExecutionResult<IntrospectionQuery>,
   config: Config,
 ) {
-  const enums = interospectionQueryToEnums(result.data);
+  const enums = interospectionQueryToEnums(result.data, {
+    noFutureProofEnums: config.noFutureProofEnums,
+  });
   if (!fs.existsSync(config.path)) {
     fs.mkdirSync(config.path);
   }
