@@ -11,8 +11,8 @@ import {
 
 /**
  *
- * Parses schema file basedd on its type.
- * supported GraphQL schema types: .graphql
+ * Parses schema file based on its type.
+ * supported GraphQL schema types: .graphql, .gql
  *
  * @param schemaPath full path to GraphQL schema file
  */
@@ -25,6 +25,7 @@ export async function parseSchema(
 
   switch (schemaExtname) {
     case '.graphql':
+    case '.gql':
       const graphqlSchema = buildSchema(schema);
       const introspectionQuery = getIntrospectionQuery();
       result = await graphql<IntrospectionQuery>(
