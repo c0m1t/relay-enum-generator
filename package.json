@@ -1,7 +1,7 @@
 {
   "name": "relay-enum-generator",
   "description": "A package which helps generate enums from a generated grqphql schema file.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "keywords": [
     "graphql",
