@@ -30,6 +30,7 @@ options:
 ```
 $ yarn relay-enum-generator --name enums
 ```
+
 ```ts
 // src/__generated__/enums.ts
 
@@ -38,13 +39,9 @@ export type Evaluation =
   | 'MEETS_EXPECTATIONS'
   | 'EXCEEDS_EXPECTATIONS'
   | 'SUPERB'
-  | '%future added value' 
+  | '%future added value';
 
-export type State =
-  | 'TODO'
-  | 'DOING'
-  | 'DONE'
-  | '%future added value' 
+export type State = 'TODO' | 'DOING' | 'DONE' | '%future added value';
 
 export type Phase =
   | 'SELF_REVIEW'
@@ -52,8 +49,7 @@ export type Phase =
   | 'MANAGER_REVIEW'
   | 'RESULTS'
   | 'IDLE'
-  | '%future added value' 
-
+  | '%future added value';
 ```
 
 ## Acknowledgments
